@@ -1,23 +1,23 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-let amenities = [];
+  let amenities = [];
+	let prettyArr = [];
+ 
+  $(':checkbox').change(function() {
 
-$(':checkbox').change(function() {
+    let name = $(this).attr("data-name");
 
-	let name = $(this).attr("data-name");
+    if (this.checked) {
+      amenities.push(name);
+      prettyArr.push(' ' + name);
+    } else {
+      indexToDel = $.inArray(name, amenities);
+      amenities.splice(indexToDel, 1);
+      prettyArr.splice(indexToDel, 1);
+    }
 
-	if (this.checked)
-	{
-		if (amenities.length > 0)
-			amenities.push(', ' + name);
-		else
-			amenities.push(name);
-	}
-	else 
-	{
-		amenities.splice( $.inArray(name, amenities), 1 );
-	}
-	$("h4").html(amenities);
-	console.log(amenities);
-	});
+    $("h4").text(prettyArr);
+  });
+
 });
+
