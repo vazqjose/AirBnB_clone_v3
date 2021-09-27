@@ -1,6 +1,5 @@
-<<<<<<< HEAD
+
 $(document).ready(function() {
-	console.log("PAGE IS LOADED");
   let amenities = [];
   let idArr = [];
   $(':checkbox').change(function() {
@@ -16,7 +15,7 @@ $(document).ready(function() {
     $(".amenities > h4").text(amenities.join(', '));
   });
 });
-=======
+/*
 $(function () {
 	const dictamenities = {};
 	const checkboxes = $('input');
@@ -32,4 +31,4 @@ $(function () {
 		});
 	}
 });
->>>>>>> 4e7ba4f7ce82cfc55269c90481670affcecffa57
+*/
