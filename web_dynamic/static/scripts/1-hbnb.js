@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
 	console.log("PAGE IS LOADED");
   let amenities = [];
@@ -15,3 +16,20 @@ $(document).ready(function() {
     $(".amenities > h4").text(amenities.join(', '));
   });
 });
+=======
+$(function () {
+	const dictamenities = {};
+	const checkboxes = $('input');
+	for (const box of checkboxes) {
+		box.addEventListener('change', function () {
+			if (box.checked) {
+				dictamenities[$(box).data('id')] = $(box).data('name');
+			} else {
+				delete dictamenities[$(box).data('id')];
+			}
+			let listamenities = Object.values(dictamenities);
+			$('DIV.amenities h4').text(listamenities.join(', '));
+		});
+	}
+});
+>>>>>>> 4e7ba4f7ce82cfc55269c90481670affcecffa57
