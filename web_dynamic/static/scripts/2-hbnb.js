@@ -11,7 +11,7 @@ $(document).ready(function() {
       amenities.splice($.inArray(name, amenities), 1);
       idArr.splice($.inArray(id, idArr), 1);
     }
-    $("h4").text(amenities.join(', '));
+    $(".amenities h4").text(amenities.join(', '));
   });
 
 
