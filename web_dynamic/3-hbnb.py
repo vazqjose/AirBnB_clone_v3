@@ -40,6 +40,15 @@ def hbnb():
                            states=st_ct,
                            amenities=amenities,
                            places=places)
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /3-hbnb/static/scripts/3-hbnb.js HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /static/images/logo.png HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /static/images/icon_bed.png HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /static/images/icon_group.png HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /static/images/icon_bath.png HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /images/logo.png HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /3-hbnb/undefined HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /static/images/logo.png HTTP/1.1" 404 -
+#127.0.0.1 - - [03/Oct/2021 02:27:39] "GET /static/images/icon.png?992f8627-5ca9-493f-9764-41dd31c27c18 HTTP/1.1" 404 -
 
 
 if __name__ == "__main__":
