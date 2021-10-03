@@ -11,7 +11,7 @@ $(document).ready(function() {
       amenities.splice($.inArray(name, amenities), 1);
       idArr.splice($.inArray(id, idArr), 1);
     }
-    $("h4").text(amenities.join(', '));
+    $(".amenities h4").text(amenities.join(', '));
   });
   $.ajax({
     type: "POST",
@@ -26,11 +26,12 @@ $(document).ready(function() {
     }
   });
 
-
+/*
 	$.get("http://0.0.0.0:5001/api/v1/status/", function (data, myStatus) {
 		if (myStatus == 'success')
 			$("div#api_status").addClass('available');
 		else
 			$("div#api_status").removeClass('available');
 	});
+	*/
 });
