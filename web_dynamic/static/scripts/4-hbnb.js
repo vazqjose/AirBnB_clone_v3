@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  const app = 'http://' + window.location.hostname;
   let amenities = [];
   let idArr = [];
   $(':checkbox').change(function () {
@@ -22,9 +23,9 @@ $(document).ready(function () {
     success: postPlaces
   });
 
-  $('BUTTON').click(function () {
+  $('button').click(function () {
     $.ajax({
-      url: api + ':5000/api/v1/places_search',
+      url: 'http://0.0.0.0:5001/api/v1/places_search/',
       type: 'POST',
       data: JSON.stringify({ 'amenities': Object.amenities }),
       contentType: 'application/json',
@@ -43,6 +44,7 @@ $(document).ready(function () {
     });
 
   function postPlaces (places_json) {
+    $('SECTION.places').empty();
     $('SECTION.places').append(places_json.map(place => {
       return `<article>
     <div class="title_box">
